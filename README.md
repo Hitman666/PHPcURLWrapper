@@ -41,7 +41,7 @@ $cookie = CurlWrapper::SendRequest($cookieSettingUrl);
 $data = array(
 	"year" => 2014,
 	"day" => 3,
-            "month" => 4,
+    "month" => 4,
 	"id" => 20
 );
 $postData = json_encode($data);
@@ -54,7 +54,7 @@ $resultsJson = json_decode($resultsHTML);
 var_dump($resultsJson);
 ```
 
-Important to note is that you have to add proper $headers array, and that you json_encode your data array as shown when POSTing to a service which expects JSON data.
+Important to note is that you have to add proper `$headers` array, and that you `json_encode` your `&data` array as shown when POSTing to a service which expects JSON data.
 
 Cookies
 =======
@@ -63,7 +63,6 @@ The reason why I first used these two lines:
 
 ```PHP
 $cookieSettingUrl = 'http://service.com/';
-
 $cookie = CurlWrapper::SendRequest($cookieSettingUrl);
 ```
 
